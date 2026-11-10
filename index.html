@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peshal's little world · Peshal Parajuli</title>
+  <meta name="description" content="Peshal Parajuli is a software engineering student from Nepal at Snow College, Utah. Projects, systems notes, and how to reach him, arranged as a small explorable world.">
+  <meta name="theme-color" content="#f3ecdf">
+  <meta property="og:title" content="Peshal's little world">
+  <meta property="og:description" content="A small world by Peshal Parajuli: projects, systems, and a courtyard from Nepal.">
+  <meta property="og:image" content="assets/img/peshal-1100.webp">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,50..100&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@500&display=swap&text=%E0%A4%AA%E0%A5%87%E0%A4%B6%E0%A4%B2%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87">
+  <link rel="preload" as="image" href="assets/img/peshal-760.webp" type="image/webp">
+  <link rel="stylesheet" href="assets/css/world.css">
+  <script>
+    // Apply saved lighting before first paint (no flash). Storage can be blocked: guard it.
+    (function () {
+      var d = document.documentElement; d.classList.add('js');
+      var t = null; try { t = localStorage.getItem('pw-light'); } catch (e) {}
+      if (!t) t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'evening' : 'day';
+      d.dataset.light = t;
+    })();
+  </script>
+  <script src="assets/js/world.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
+
+<header class="topbar">
+  <a class="wordmark" href="#top" aria-label="Peshal's little world, back to the top">
+    <svg class="wordmark-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 21c2-6 7-9 13-9s11 3 13 9c-3 3-8 5-13 5S6 24 3 21z" fill="var(--moss)"/><path d="M3 21c3 3 8 5 13 5s10-2 13-5l-2 4c-3 3-7 4-11 4s-8-1-11-4z" fill="var(--brick)"/><path d="M14 4h4l1 9h-6z" fill="var(--ink)"/></svg>
+    <span>Peshal's little world</span>
+  </a>
+  <nav aria-label="Main">
+    <ul class="nav">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="light-toggle" type="button" aria-pressed="false" data-light-toggle>
+    <span class="light-icon" aria-hidden="true"><span class="sun"></span><span class="moon"></span></span>
+    <span class="light-label">Evening</span>
+  </button>
+</header>
+
+<main id="top">
+
+<!-- ============================ THE WORLD ============================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span lang="ne" class="deva">पेशल पराजुली</span> · Ephraim, Utah ⇄ Kathmandu</p>
+    <h1 id="hero-title">A small world <span class="by">by Peshal</span></h1>
+    <p class="lede">I'm a software engineering student from Nepal, studying at Snow College in Utah. I like Linux, systems, accessibility, and building software that someone actually uses.</p>
+    <p class="lede-2">Wander the map, or skip it. Everything on it is also plain text further down.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">Explore my work <span aria-hidden="true">→</span></a>
+      <a class="btn btn-quiet" href="#contact">Say hello</a>
+    </div>
+  </div>
+
+  <div class="world" data-world>
+    <div class="world-frame">
+      <div class="world-scene" data-scene>
+
+        <!-- ---------- Ground, roads, cables, letters: WIDE layout ---------- -->
+        <svg class="ground ground-wide" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+          <!-- floating shadow -->
+          <ellipse cx="600" cy="886" rx="380" ry="10" class="float-shadow"/>
+          <!-- cliff / strata -->
+          <path class="cliff" d="M70 565 C60 650 120 760 240 820 C360 880 840 885 960 825 C1090 760 1170 650 1160 560 L1150 610 C1140 700 1070 790 960 850 C840 905 360 905 240 850 C120 795 70 690 70 565 Z"/>
+          <path class="cliff-face" d="M70 565 C74 610 80 665 130 740 C230 815 420 845 600 845 C760 845 940 820 1060 740 C1130 690 1160 620 1160 560 L1158 640 C1150 720 1080 800 960 850 C840 900 360 900 240 852 C120 800 74 700 70 640 Z"/>
+          <path class="strata" d="M84 650 C150 760 300 815 600 822 C880 818 1050 770 1150 640"/>
+          <path class="strata strata-2" d="M110 720 C220 810 400 850 600 852 C820 850 1000 815 1120 720"/>
+          <!-- hanging rocks -->
+          <path class="rock" d="M430 872 L462 896 L492 874 Z"/><path class="rock" d="M630 880 L652 898 L690 878 Z"/><path class="rock" d="M780 868 L798 892 L824 866 Z"/>
+          <!-- top surface -->
+          <path class="top" d="M70 560 C60 470 230 380 420 372 C520 368 560 380 640 376 C820 368 1050 400 1130 480 C1190 540 1160 640 1060 740 C940 820 760 845 600 845 C420 845 230 815 130 740 C80 690 74 610 70 560 Z"/>
+          <path class="top-rim" d="M70 560 C60 470 230 380 420 372 C520 368 560 380 640 376 C820 368 1050 400 1130 480 C1190 540 1160 640 1060 740 C940 820 760 845 600 845 C420 845 230 815 130 740 C80 690 74 610 70 560 Z"/>
+
+          <!-- NAME: extruded letters "PES" | "HAL" -->
+          <g class="letters">
+            <g class="extrude">
+              <text x="512" y="402" text-anchor="end" class="name">PES</text>
+              <text x="510" y="400" text-anchor="end" class="name">PES</text>
+              <text x="508" y="398" text-anchor="end" class="name">PES</text>
+              <text x="506" y="396" text-anchor="end" class="name">PES</text>
+              <text x="504" y="394" text-anchor="end" class="name">PES</text>
+              <text x="502" y="392" text-anchor="end" class="name">PES</text>
+              <text x="704" y="402" class="name">HAL</text>
+              <text x="702" y="400" class="name">HAL</text>
+              <text x="700" y="398" class="name">HAL</text>
+              <text x="698" y="396" class="name">HAL</text>
+              <text x="696" y="394" class="name">HAL</text>
+              <text x="694" y="392" class="name">HAL</text>
+            </g>
+            <text x="500" y="390" text-anchor="end" class="name face">PES</text>
+            <text x="692" y="390" class="name face">HAL</text>
+          </g>
+          <!-- base shadow for letters -->
+          <path class="letter-ground" d="M110 398 C250 410 420 408 520 400 M690 400 C820 410 980 410 1110 398"/>
+          <!-- ladder leaning on the P -->
+          <g class="ladder"><path d="M128 402 L154 262 M148 406 L174 266"/><path d="M133 376 L153 379 M138 348 L158 351 M143 320 L163 323 M148 292 L168 295"/></g>
+          <!-- tiny flag on the L -->
+          <g class="pennant"><path d="M1084 254 V190" class="pole"/><path d="M1085 192 L1110 206 L1092 208 L1112 224 L1085 222 Z" class="flag"/></g>
+
+          <!-- ROADS -->
+          <g class="roads">
+            <path d="M478 712 C390 700 300 650 236 585"/>
+            <path d="M722 712 C810 700 900 652 968 592"/>
+            <path d="M492 748 C420 780 360 800 300 798"/>
+            <path d="M708 748 C780 780 840 800 900 806"/>
+          </g>
+          <!-- CABLES (dim) + lit overlays -->
+          <g class="cables">
+            <path data-cable="lab"       d="M486 724 C392 714 292 662 226 596"/>
+            <path data-cable="garden"    d="M714 724 C810 714 906 664 978 602"/>
+            <path data-cable="courtyard" d="M500 758 C430 792 366 812 296 810"/>
+            <path data-cable="nextstop"  d="M700 758 C772 792 836 814 904 818"/>
+          </g>
+          <g class="cables-lit">
+            <path data-cable-lit="lab"       d="M486 724 C392 714 292 662 226 596"/>
+            <path data-cable-lit="garden"    d="M714 724 C810 714 906 664 978 602"/>
+            <path data-cable-lit="courtyard" d="M500 758 C430 792 366 812 296 810"/>
+            <path data-cable-lit="nextstop"  d="M700 758 C772 792 836 814 904 818"/>
+          </g>
+
+          <!-- PLAZA -->
+          <g class="plaza">
+            <ellipse cx="600" cy="732" rx="176" ry="54" class="plaza-edge"/>
+            <ellipse cx="600" cy="726" rx="170" ry="50" class="plaza-top"/>
+            <ellipse cx="600" cy="726" rx="128" ry="36" class="plaza-ring"/>
+            <ellipse cx="600" cy="726" rx="84" ry="23" class="plaza-ring"/>
+            <ellipse cx="600" cy="732" rx="70" ry="13" class="char-shadow"/>
+          </g>
+
+          <!-- trees & bushes -->
+          <g class="flora">
+            <g transform="translate(70 520)"><use href="#tree"/></g>
+            <g transform="translate(1130 520) scale(.85)"><use href="#tree"/></g>
+            <g transform="translate(420 520) scale(.7)"><use href="#tree"/></g>
+            <g transform="translate(790 540) scale(.6)"><use href="#tree"/></g>
+            <g transform="translate(520 830) scale(.55)"><use href="#bush"/></g>
+            <g transform="translate(760 830) scale(.7)"><use href="#bush"/></g>
+            <g transform="translate(1100 700) scale(.8)"><use href="#bush"/></g>
+            <g transform="translate(120 700) scale(.7)"><use href="#bush"/></g>
+          </g>
+          <!-- lamp posts that glow in the evening -->
+          <g class="lamps">
+            <g transform="translate(400 690)"><use href="#lamp"/></g>
+            <g transform="translate(820 690)"><use href="#lamp"/></g>
+          </g>
+        </svg>
+
+        <!-- ---------- Ground: TALL (phone) layout ---------- -->
+        <svg class="ground ground-tall" viewBox="0 0 400 1320" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+          <ellipse cx="200" cy="1306" rx="150" ry="8" class="float-shadow"/>
+          <path class="cliff" d="M24 230 C14 640 14 1090 60 1220 C120 1290 280 1290 340 1220 C388 1090 390 640 378 230 L376 300 C392 700 388 1120 344 1250 C280 1310 120 1310 56 1250 C12 1120 10 700 24 300 Z"/>
+          <path class="cliff-face" d="M22 600 C16 900 22 1120 60 1220 C120 1288 280 1288 340 1220 C380 1120 386 900 380 600 L378 700 C386 960 384 1150 344 1250 C280 1306 120 1306 56 1250 C16 1150 14 960 22 700 Z"/>
+          <path class="rock" d="M150 1296 L176 1320 L200 1298 Z"/><path class="rock" d="M232 1296 L246 1316 L262 1294 Z"/>
+          <path class="top" d="M24 230 C30 160 110 140 200 140 C290 140 372 160 378 230 C392 640 390 1080 340 1220 C280 1276 120 1276 60 1220 C12 1080 10 640 24 230 Z"/>
+          <path class="top-rim" d="M24 230 C30 160 110 140 200 140 C290 140 372 160 378 230 C392 640 390 1080 340 1220 C280 1276 120 1276 60 1220 C12 1080 10 640 24 230 Z"/>
+          <g class="letters">
+            <g class="extrude">
+              <text x="207" y="229" text-anchor="middle" class="name name-sm">PESHAL</text>
+              <text x="205" y="227" text-anchor="middle" class="name name-sm">PESHAL</text>
+              <text x="203" y="225" text-anchor="middle" class="name name-sm">PESHAL</text>
+              <text x="201" y="223" text-anchor="middle" class="name name-sm">PESHAL</text>
+            </g>
+            <text x="199" y="221" text-anchor="middle" class="name name-sm face">PESHAL</text>
+          </g>
+          <g class="roads">
+            <path d="M200 612 C200 700 100 720 110 805 C120 880 290 880 290 955 C290 1030 110 1030 110 1105 C110 1180 290 1170 290 1235"/>
+          </g>
+          <g class="cables">
+            <path data-cable="lab"       d="M210 616 C212 704 112 726 122 805"/>
+            <path data-cable="garden"    d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955"/>
+            <path data-cable="courtyard" d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955 C302 1036 122 1036 122 1105"/>
+            <path data-cable="nextstop"  d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955 C302 1036 122 1036 122 1105 C122 1172 302 1166 302 1235"/>
+          </g>
+          <g class="cables-lit">
+            <path data-cable-lit="lab"       d="M210 616 C212 704 112 726 122 805"/>
+            <path data-cable-lit="garden"    d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955"/>
+            <path data-cable-lit="courtyard" d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955 C302 1036 122 1036 122 1105"/>
+            <path data-cable-lit="nextstop"  d="M210 616 C212 704 112 726 122 805 C132 872 302 872 302 955 C302 1036 122 1036 122 1105 C122 1172 302 1166 302 1235"/>
+          </g>
+          <g class="plaza">
+            <ellipse cx="200" cy="606" rx="140" ry="40" class="plaza-edge"/>
+            <ellipse cx="200" cy="601" rx="134" ry="36" class="plaza-top"/>
+            <ellipse cx="200" cy="601" rx="92" ry="24" class="plaza-ring"/>
+            <ellipse cx="200" cy="604" rx="56" ry="10" class="char-shadow"/>
+          </g>
+          <g class="flora">
+            <g transform="translate(50 320) scale(.6)"><use href="#tree"/></g>
+            <g transform="translate(352 340) scale(.55)"><use href="#tree"/></g>
+            <g transform="translate(344 470) scale(.5)"><use href="#bush"/></g>
+            <g transform="translate(56 500) scale(.5)"><use href="#bush"/></g>
+            <g transform="translate(340 1110) scale(.55)"><use href="#bush"/></g>
+            <g transform="translate(66 1210) scale(.5)"><use href="#bush"/></g>
+          </g>
+          <g class="lamps"><g transform="translate(330 620) scale(.7)"><use href="#lamp"/></g><g transform="translate(70 640) scale(.7)"><use href="#lamp"/></g></g>
+        </svg>
+
+        <!-- ---------- The host ---------- -->
+        <div class="host" data-host>
+          <img src="assets/img/peshal-760.webp"
+               srcset="assets/img/peshal-760.webp 313w, assets/img/peshal-1100.webp 453w"
+               sizes="(max-width: 700px) 40vw, 220px"
+               width="313" height="760"
+               alt="Peshal as a 3D cartoon: wavy black hair, black rectangular glasses, a light daura surwal under a dark blazer, and a Nepal flag pin on the lapel. He stands on the plaza with one hand on his lapel, smiling.">
+          <p class="bubble" aria-hidden="true" data-bubble>Namaste! Pick a place.</p>
+        </div>
+
+        <!-- ---------- Locations (real buttons) ---------- -->
+        <button class="loc" type="button" data-loc="lab" data-target="work" data-say="That's where I build things." aria-haspopup="dialog">
+          <svg class="loc-art" viewBox="0 0 240 220" aria-hidden="true" focusable="false"><use href="#art-lab"/></svg>
+          <span class="loc-label"><span class="loc-name">The Build Lab</span><span class="loc-what">Projects</span></span>
+        </button>
+        <button class="loc" type="button" data-loc="garden" data-target="systems" data-say="Servers, threads, and small plants." aria-haspopup="dialog">
+          <svg class="loc-art" viewBox="0 0 240 220" aria-hidden="true" focusable="false"><use href="#art-garden"/></svg>
+          <span class="loc-label"><span class="loc-name">The Server Garden</span><span class="loc-what">Linux &amp; systems</span></span>
+        </button>
+        <button class="loc" type="button" data-loc="courtyard" data-target="about" data-say="A little piece of home." aria-haspopup="dialog">
+          <svg class="loc-art" viewBox="0 0 240 220" aria-hidden="true" focusable="false"><use href="#art-courtyard"/></svg>
+          <span class="loc-label"><span class="loc-name">The Nepal Courtyard</span><span class="loc-what">About me</span></span>
+        </button>
+        <button class="loc" type="button" data-loc="nextstop" data-target="contact" data-say="Want to talk? Board here." aria-haspopup="dialog">
+          <svg class="loc-art" viewBox="0 0 240 220" aria-hidden="true" focusable="false"><use href="#art-nextstop"/></svg>
+          <span class="loc-label"><span class="loc-name">The Next Stop</span><span class="loc-what">Contact</span></span>
+        </button>
+      </div>
+    </div>
+    <p class="world-hint">Select a place to visit it.<span class="esc"> <kbd>Esc</kbd> brings you back.</span></p>
+  </div>
+</section>
+
+<!-- ============================ THE BUILD LAB ============================ -->
+<section class="place" id="work" data-place="lab" aria-labelledby="work-title" tabindex="-1">
+  <header class="place-head">
+    <p class="place-kicker"><span class="pin pin-brick" aria-hidden="true"></span>The Build Lab · Work</p>
+    <h2 id="work-title">Things I've built, how they work, and what's still broken.</h2>
+    <p class="place-intro">Each folder is one project: what it does, the decisions behind it, and links to the code or the live site. Open whichever looks interesting.</p>
+  </header>
+
+  <div class="drawer" data-drawer>
+
+    <!-- ===== Folder 1: Battleship ===== -->
+    <article class="folder" id="battleship">
+      <h3 class="folder-h">
+        <button class="folder-tab" type="button" aria-expanded="true" aria-controls="battleship-body">
+          <span class="folder-no">01</span>
+          <span class="folder-title">Battleship, two players, in Blazor</span>
+          <span class="folder-meta">C# · .NET · Blazor Server · xUnit</span>
+          <span class="stamp stamp-ok">Works · class project</span>
+        </button>
+      </h3>
+      <div class="folder-body" id="battleship-body">
+        <div class="folder-inner">
+          <figure class="clipped">
+            <span class="clip" aria-hidden="true"></span>
+            <svg class="diagram" viewBox="0 0 520 330" role="img" aria-labelledby="bs-diag-t">
+              <title id="bs-diag-t">Game state diagram: WaitingForPlayers moves to PlacingShips when the second player joins, then InProgress once ships are placed, then GameOver when a fleet is sunk. Storage sits behind an IStorage interface with a file store and a memory store.</title>
+              <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+              <g class="dg-boxes">
+                <rect x="14" y="30" width="150" height="46" rx="4"/><text x="89" y="58">WaitingForPlayers</text>
+                <rect x="190" y="30" width="130" height="46" rx="4"/><text x="255" y="58">PlacingShips</text>
+                <rect x="346" y="30" width="110" height="46" rx="4"/><text x="401" y="58">InProgress</text>
+                <rect x="346" y="120" width="110" height="46" rx="4" class="dg-end"/><text x="401" y="148">GameOver</text>
+              </g>
+              <g class="dg-arrows">
+                <path d="M164 53 H186" marker-end="url(#arr)"/><path d="M320 53 H342" marker-end="url(#arr)"/><path d="M401 76 V116" marker-end="url(#arr)"/>
+                <path d="M440 76 C500 70 500 30 440 30" marker-end="url(#arr)"/>
+              </g>
+              <g class="dg-notes">
+                <text x="175" y="98">2nd player joins</text>
+                <text x="436" y="20">hit → keep turn</text>
+                <text x="410" y="102" class="start">fleet sunk</text>
+              </g>
+              <g class="dg-boxes dg-store">
+                <rect x="14" y="214" width="150" height="40" rx="4"/><text x="89" y="239">Lobby</text>
+                <rect x="190" y="214" width="130" height="40" rx="4" class="dg-iface"/><text x="255" y="239">IStorage</text>
+                <rect x="346" y="196" width="160" height="34" rx="4"/><text x="426" y="218">FileDataStore (JSON)</text>
+                <rect x="346" y="244" width="160" height="34" rx="4"/><text x="426" y="266">MemoryDataStore</text>
+              </g>
+              <g class="dg-arrows"><path d="M164 234 H186" marker-end="url(#arr)"/><path d="M320 228 L342 214" marker-end="url(#arr)"/><path d="M320 240 L342 258" marker-end="url(#arr)"/></g>
+              <text x="14" y="312" class="dg-cap">tests swap in the memory store; the app uses the file</text>
+            </svg>
+            <figcaption>My sketch of the game's states and storage. There's no screenshot yet; it runs locally only.</figcaption>
+          </figure>
+          <div class="notes">
+            <p class="notes-lede">A two-player Battleship game for a software engineering class. One player creates a game in the lobby, another joins, both place ships, then they take turns firing.</p>
+            <h4>Decisions I'd make again</h4>
+            <ul>
+              <li><strong>The game is a state machine.</strong> A <code>GameState</code> enum moves from <code>WaitingForPlayers</code> to <code>PlacingShips</code> to <code>InProgress</code> to <code>GameOver</code>. Moves that don't fit the current state get rejected instead of half-working.</li>
+              <li><strong>Storage behind an interface.</strong> <code>IStorage</code> has a JSON <code>FileDataStore</code> and a <code>MemoryDataStore</code>. The tests use the memory one, so they never touch the disk.</li>
+              <li><strong>Ships come from a factory.</strong> <code>ShipFactory.CreateShip(length)</code> picks the class, so a new ship type is one new class plus one line.</li>
+              <li><strong>The lobby raises an event.</strong> <code>LobbyChanged</code> lets open pages update when someone creates or joins a game.</li>
+            </ul>
+            <h4>Tested</h4>
+            <p>19 xUnit tests cover placing ships (valid and invalid), hits, misses, turn switching, out-of-bounds attacks, player lookups and both data stores.</p>
+            <h4>Still broken</h4>
+            <p>Feedback I got: after the last ship is placed, the board needs one extra click before the game starts. I haven't fixed it yet.</p>
+            <p class="links"><a class="link-out" href="https://github.com/parajulipeshal/BattleshipGame">Code on GitHub<span class="sr-only"> (Battleship)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Folder 2: Lottery ===== -->
+    <article class="folder" id="lottery">
+      <h3 class="folder-h">
+        <button class="folder-tab" type="button" aria-expanded="true" aria-controls="lottery-body">
+          <span class="folder-no">02</span>
+          <span class="folder-title">A lottery that survives 100 stores at once</span>
+          <span class="folder-meta">C# · async/await · locks · NUnit</span>
+          <span class="stamp stamp-ok">Works · OS class</span>
+        </button>
+      </h3>
+      <div class="folder-body" id="lottery-body">
+        <div class="folder-inner">
+          <figure class="clipped">
+            <span class="clip" aria-hidden="true"></span>
+            <svg class="diagram" viewBox="0 0 520 330" role="img" aria-labelledby="lo-diag-t">
+              <title id="lo-diag-t">One hundred store tasks sell tickets at the same time. Every write to the shared sold-ticket list goes through one lock. After the drawing, the sold tickets are split into three slices and scored by three tasks in parallel.</title>
+              <g class="dg-stores">
+                <rect x="14" y="20" width="84" height="28" rx="3"/><text x="56" y="39">Store 1</text>
+                <rect x="14" y="56" width="84" height="28" rx="3"/><text x="56" y="75">Store 2</text>
+                <rect x="14" y="92" width="84" height="28" rx="3"/><text x="56" y="111">Store 3</text>
+                <text x="56" y="140" class="dg-dots">⋮</text>
+                <rect x="14" y="152" width="84" height="28" rx="3"/><text x="56" y="171">Store 100</text>
+              </g>
+              <g class="dg-arrows"><path d="M98 34 C140 40 150 90 178 96" marker-end="url(#arr)"/><path d="M98 70 C130 76 150 94 178 100" marker-end="url(#arr)"/><path d="M98 106 H178" marker-end="url(#arr)"/><path d="M98 166 C140 160 150 116 178 110" marker-end="url(#arr)"/></g>
+              <g class="dg-boxes">
+                <rect x="182" y="76" width="92" height="56" rx="6" class="dg-lock"/><text x="228" y="100">lock</text><text x="228" y="118" class="dg-small">one writer</text>
+                <rect x="296" y="80" width="124" height="48" rx="4"/><text x="358" y="108">soldTickets</text>
+              </g>
+              <g class="dg-arrows"><path d="M274 104 H292" marker-end="url(#arr)"/><path d="M358 128 V196" marker-end="url(#arr)"/></g>
+              <text x="368" y="166" class="dg-small start">draw numbers</text>
+              <g class="dg-boxes">
+                <rect x="214" y="200" width="88" height="34" rx="4"/><text x="258" y="222">Task ⅓</text>
+                <rect x="314" y="200" width="88" height="34" rx="4"/><text x="358" y="222">Task ⅓</text>
+                <rect x="414" y="200" width="88" height="34" rx="4"/><text x="458" y="222">Task ⅓</text>
+                <rect x="298" y="270" width="120" height="34" rx="4" class="dg-end"/><text x="358" y="292">Results</text>
+              </g>
+              <g class="dg-arrows"><path d="M258 234 L318 268" marker-end="url(#arr)"/><path d="M358 234 V266" marker-end="url(#arr)"/><path d="M458 234 L398 268" marker-end="url(#arr)"/></g>
+              <text x="14" y="312" class="dg-cap">each store sells 1,000–2,000 tickets</text>
+            </svg>
+            <figcaption>How the "rush hour" demo works.</figcaption>
+          </figure>
+          <div class="notes">
+            <p class="notes-lede">A Powerball-style lottery library from my operating systems class: open a sales period, sell tickets, draw numbers, find the winners. Then we stress it with lots of stores selling at the same moment.</p>
+            <h4>What I worked through</h4>
+            <ul>
+              <li><strong>One shared list, one lock.</strong> Every read and write to the sold tickets goes through the same lock object. Without it, 100 tasks appending at once lose tickets or crash.</li>
+              <li><strong>A rush-hour demo.</strong> 100 store tasks each sell 1,000–2,000 tickets, awaited together with <code>Task.WhenAll</code>. Then the count is checked against what was actually sold.</li>
+              <li><strong>Scoring in parallel.</strong> After the drawing, the tickets are split into three slices and scored on three tasks, then merged into one result.</li>
+              <li><strong>Time is a parameter.</strong> Methods take a <code>DateTime</code> instead of calling <code>DateTime.Now</code>, so tests can pretend it's any day of the sales week.</li>
+            </ul>
+            <h4>Tested</h4>
+            <p>An NUnit project covers tickets, the prize calculator and the agency's sales rules.</p>
+            <!-- TODO(peshal): this started as in-class code. Say which parts you wrote (the locking? the async demo?) so the credit is precise. -->
+            <p class="links"><a class="link-out" href="https://github.com/parajulipeshal/osLotteryClass">Code on GitHub<span class="sr-only"> (lottery)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Folder 3: Honors demo ===== -->
+    <article class="folder" id="honors">
+      <h3 class="folder-h">
+        <button class="folder-tab" type="button" aria-expanded="true" aria-controls="honors-body">
+          <span class="folder-no">03</span>
+          <span class="folder-title">Snow College Honors Program, a demo site</span>
+          <span class="folder-meta">HTML · CSS · JavaScript · Tailwind CSS</span>
+          <span class="stamp stamp-live">Live demo</span>
+        </button>
+      </h3>
+      <div class="folder-body" id="honors-body">
+        <div class="folder-inner">
+          <figure class="clipped photo">
+            <span class="clip" aria-hidden="true"></span>
+            <img src="assets/img/shot-honors.webp" width="1200" height="619" loading="lazy" decoding="async"
+                 alt="Homepage of the Honors Program demo: the headline 'Read closer. Argue harder. Graduate distinguished.' beside a small panel of program facts, with an orange Apply button.">
+            <figcaption>The demo's homepage.</figcaption>
+          </figure>
+          <div class="notes">
+            <p class="notes-lede">I work as the Honors Program assistant at Snow College, so I know what students ask about. This demo pitches the program the way it actually runs: discussion first, with sample seminars, social events and how to apply.</p>
+            <h4>Notes</h4>
+            <ul>
+              <li>It's a demo I built, not the college's official page.</li>
+              <li>Static HTML, CSS and JavaScript with Tailwind, hosted on GitHub Pages.</li>
+            </ul>
+            <!-- TODO(peshal): add one or two real technical decisions here (layout, accessibility checks, what you'd change). -->
+            <p class="links">
+              <a class="link-out" href="https://parajulipeshal.github.io/demoHonors/">Visit the demo<span class="sr-only"> (Honors Program)</span></a>
+              <a class="link-out" href="https://github.com/parajulipeshal/demoHonors">Code on GitHub<span class="sr-only"> (Honors demo)</span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Folder 4: Think Big ===== -->
+    <article class="folder" id="thinkbig">
+      <h3 class="folder-h">
+        <button class="folder-tab" type="button" aria-expanded="true" aria-controls="thinkbig-body">
+          <span class="folder-no">04</span>
+          <span class="folder-title">Think Big, a nonprofit's website</span>
+          <span class="folder-meta">React · Tailwind CSS · GSAP</span>
+          <span class="stamp stamp-live">Live site</span>
+        </button>
+      </h3>
+      <div class="folder-body" id="thinkbig-body">
+        <div class="folder-inner">
+          <figure class="clipped photo">
+            <span class="clip" aria-hidden="true"></span>
+            <img src="assets/img/shot-thinkbig.webp" width="1200" height="619" loading="lazy" decoding="async"
+                 alt="Think Big homepage: a misty mountain background, the Think Big logo with the tagline 'Ending Exploitation, Ensuring Education', and small animated shapes drifting across.">
+            <figcaption>Think Big's homepage.</figcaption>
+          </figure>
+          <div class="notes">
+            <p class="notes-lede">Think Big is a nonprofit in Kathmandu working to end exploitation and get kids into education. I'm their HR manager and I mentor students there. The site covers their programs, student support, scholarships, civic engagement and awareness work.</p>
+            <h4>Notes</h4>
+            <ul>
+              <li>Built with React and Tailwind; the motion on the homepage uses GSAP.</li>
+            </ul>
+            <!-- TODO(peshal): say what you personally built on this site, and anything you'd change. -->
+            <p class="links"><a class="link-out" href="https://thinkbig.org.np/">Visit thinkbig.org.np</a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Folder 5: Gambhir ===== -->
+    <article class="folder" id="gamvir">
+      <h3 class="folder-h">
+        <button class="folder-tab" type="button" aria-expanded="true" aria-controls="gamvir-body">
+          <span class="folder-no">05</span>
+          <span class="folder-title">Shree Gamvir Samudra Setu Secondary School</span>
+          <span class="folder-meta">React · Next.js · Tailwind CSS</span>
+          <span class="stamp stamp-live">Live site</span>
+        </button>
+      </h3>
+      <div class="folder-body" id="gamvir-body">
+        <div class="folder-inner">
+          <figure class="clipped photo">
+            <span class="clip" aria-hidden="true"></span>
+            <img src="assets/img/shot-gamvir.webp" width="1200" height="619" loading="lazy" decoding="async"
+                 alt="The school website's homepage: the school crest and name, a blue navigation bar, a photo from a school event, and contact cards for the head teacher and assistant head teacher.">
+            <figcaption>The school's homepage.</figcaption>
+          </figure>
+          <div class="notes">
+            <p class="notes-lede">The public website for a secondary school in Imadol, Lalitpur, in the Kathmandu valley: notices, faculties, the curriculum, a gallery, scholarships and contact details for staff.</p>
+            <!-- TODO(peshal): add what you built and one or two technical decisions. Kept short until verified. -->
+            <p class="links"><a class="link-out" href="https://gamvirss.edu.np/">Visit gamvirss.edu.np</a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Unfinished experiments: a workbench, not folders -->
+  <div class="bench" aria-labelledby="bench-title">
+    <h3 id="bench-title" class="bench-title">On the workbench, unfinished</h3>
+    <p class="bench-intro">Early experiments. They're here so you can see where I started, not as finished work.</p>
+    <ul class="bench-list">
+      <li>
+        <span class="bench-tag">2024 · Python, Streamlit</span>
+        <strong>AICure</strong>
+        <span>A symptom checker. Right now it only matches what you type against one hard-coded list of malaria symptoms. A prototype, not a diagnosis tool.</span>
+      </li>
+      <li>
+        <span class="bench-tag">2025 · Python, Streamlit</span>
+        <strong>Nanglo</strong>
+        <span>An image detection app that sends a picture to a vision model and shows what it finds. You bring your own API key.</span>
+      </li>
+      <li>
+        <span class="bench-tag">Nov 2026 · Just started</span>
+        <strong>changa-chet</strong>
+        <span>A new repo with nothing in it yet. More when there's something to show.</span>
+        <!-- TODO(peshal): describe changa-chet once it has code. -->
+      </li>
+    </ul>
+    <!-- NOTE: GitHub links for AICure and Nanglo are intentionally left off until the API keys committed in those repos are revoked. -->
+  </div>
+  <p class="back-to-map"><a href="#top">↑ Back to the map</a></p>
+</section>
+
+<!-- ============================ THE SERVER GARDEN ============================ -->
+<section class="place place-garden" id="systems" data-place="garden" aria-labelledby="systems-title" tabindex="-1">
+  <header class="place-head">
+    <p class="place-kicker"><span class="pin pin-moss" aria-hidden="true"></span>The Server Garden · Linux &amp; systems</p>
+    <h2 id="systems-title">I like knowing what happens underneath the app.</h2>
+    <p class="place-intro">Processes, threads, the network, the machine itself. This corner is for that. A green light means there's work to show. Amber means I'm learning it and haven't written it up yet.</p>
+  </header>
+
+  <div class="garden-grid">
+    <div class="rack" role="group" aria-labelledby="rack-title">
+      <p class="rack-title" id="rack-title">Rack <span class="mono">pw-01</span></p>
+      <button class="ru" type="button" aria-pressed="true" data-ru="concurrency"><span class="led led-green" aria-hidden="true"></span><span class="ru-name">Concurrency</span><span class="ru-state">2 projects</span></button>
+      <button class="ru" type="button" aria-pressed="false" data-ru="linux"><span class="led led-amber" aria-hidden="true"></span><span class="ru-name">Linux</span><span class="ru-state">learning</span></button>
+      <button class="ru" type="button" aria-pressed="false" data-ru="network"><span class="led led-amber" aria-hidden="true"></span><span class="ru-name">Networking</span><span class="ru-state">learning</span></button>
+      <div class="rack-vent" aria-hidden="true"></div>
+    </div>
+    <div class="readout" aria-live="polite">
+      <div class="readout-pane" data-ru-pane="concurrency">
+        <p class="prompt"><span aria-hidden="true">peshal@garden:~$</span> cat concurrency.txt</p>
+        <p>Two projects from my operating systems class: the deadlock demo below, and the <a href="#lottery" data-open-folder="lottery">lottery that survives 100 stores at once</a> in the Build Lab.</p>
+      </div>
+      <div class="readout-pane" data-ru-pane="linux" hidden>
+        <p class="prompt"><span aria-hidden="true">peshal@garden:~$</span> cat linux.txt</p>
+        <p>I enjoy working in Linux. Proper notes coming soon. I'd rather write up what I actually set up and broke than list distro logos.</p>
+        <!-- TODO(peshal): your distro(s), what you run, a thing you fixed. One concrete story beats a list. -->
+      </div>
+      <div class="readout-pane" data-ru-pane="network" hidden>
+        <p class="prompt"><span aria-hidden="true">peshal@garden:~$</span> cat networking.txt</p>
+        <p>Networking is on my list of things to understand from the wire up. No project to show here yet.</p>
+        <!-- TODO(peshal): add a networking project or notes when you have one. -->
+      </div>
+    </div>
+  </div>
+
+  <article class="case" aria-labelledby="dp-title">
+    <div class="case-text">
+      <p class="case-kicker">Case study · C# threads · <span class="stamp stamp-ok stamp-inline">Works</span></p>
+      <h3 id="dp-title">Making five professors deadlock, then fixing it</h3>
+      <p>Dining philosophers, with professors. Five threads sit around a table with five forks between them, and each fork is a lock. To eat, a professor needs the fork on the left and the fork on the right.</p>
+      <p>The program has three versions behind one flag:</p>
+      <ol class="versions">
+        <li><strong>Version 1 deadlocks on purpose.</strong> Everyone grabs left, then right. If they all grab left at once, every fork is taken and everyone waits forever. The demo gives up after five seconds.</li>
+        <li><strong>Version 2 fixes it with one change.</strong> Professor 4 picks up the right fork first. That breaks the circle of waiting, so everyone finishes five bites.</li>
+        <li><strong>Version 3 shows its work.</strong> It prints who holds which fork after every pick-up and put-down.</li>
+      </ol>
+      <pre class="code" tabindex="0" aria-label="The fix, in C#"><code><span class="c">// Professor 4 changes the order</span>
+<span class="k">if</span> (version != <span class="n">1</span> &amp;&amp; id == <span class="n">4</span>)
+{
+    first  = right;
+    second = left;
+}</code></pre>
+      <p class="links"><a class="link-out" href="https://github.com/parajulipeshal/diningPhilosophersMultiThreading">Code on GitHub<span class="sr-only"> (dining philosophers)</span></a></p>
+    </div>
+    <div class="case-visual">
+      <div class="table-sim" data-table>
+        <div class="seg" role="group" aria-label="Show version">
+          <button type="button" aria-pressed="true" data-v="1">Version 1: deadlock</button>
+          <button type="button" aria-pressed="false" data-v="2">Version 2: fixed</button>
+        </div>
+        <svg viewBox="0 0 300 300" class="table-svg" role="img" aria-labelledby="table-t" data-table-svg>
+          <title id="table-t">Five professors around a round table, each holding the fork on their left. In version 1 every arrow forms a closed circle of waiting; in version 2 professor 4 reaches right first and the circle is broken.</title>
+          <circle cx="150" cy="150" r="78" class="tbl"/>
+          <g class="profs"></g>
+        </svg>
+        <p class="table-caption" data-table-caption aria-live="polite">Version 1: every professor holds their left fork and waits for the right one. Nobody can move.</p>
+      </div>
+      <figure class="sketch">
+        <img src="assets/img/sketch-philosophers.webp" width="900" height="826" loading="lazy" decoding="async" alt="My hand-drawn sketch: a circle with professors P0 to P4 around it and forks f0 to f4 between them.">
+        <figcaption>The sketch I drew before writing any code.</figcaption>
+      </figure>
+    </div>
+  </article>
+  <p class="back-to-map"><a href="#top">↑ Back to the map</a></p>
+</section>
+
+<!-- ============================ THE NEPAL COURTYARD ============================ -->
+<section class="place place-courtyard" id="about" data-place="courtyard" aria-labelledby="about-title" tabindex="-1">
+  <header class="place-head">
+    <p class="place-kicker"><span class="pin pin-brick" aria-hidden="true"></span>The Nepal Courtyard · About</p>
+    <h2 id="about-title"><span lang="ne" class="deva">नमस्ते</span>, I'm Peshal.</h2>
+  </header>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="big">I grew up in Nepal and studied computer science for my +2 at Capital College and Research Center in Kathmandu. In 2025 I moved to Ephraim, Utah, to study Computer Software Engineering in the Honors Program at Snow College. I came through the EducationUSA Opportunity Funds program.</p>
+      <p>Back home I kept starting things. In 2023 I founded <strong>Everest TechSo Network</strong>, a student-led group teaching computer science and AI, and we organized Nepal's first code debugging competition. In high school I co-founded <strong>Mold Skill</strong>, a study site with notes and exam prep for friends and juniors. I still mentor students at <strong>Think Big</strong>.</p>
+      <p>At Snow College I led the Computer Science Club for a year. Right now I'm a Resident Assistant, a Physics grader, and the Honors Program assistant. That's a lot of name tags.</p>
+
+      <h3 class="small-h">What I care about</h3>
+      <ul class="cares">
+        <li><strong>Software someone actually uses.</strong> A small tool that helps one person beats a big demo nobody opens.</li>
+        <li><strong>Accessibility.</strong> If it doesn't work with a keyboard or a screen reader, it doesn't work. This site has to pass that too.</li>
+        <li><strong>Knowing what's underneath.</strong> Linux, threads, networks: the parts that explain why the app above them behaves the way it does.</li>
+        <li><strong>Teaching what I just learned.</strong> Most of my clubs and side projects started as "let me show you how I did this."</li>
+      </ul>
+    </div>
+
+    <aside class="about-side" aria-label="Two places, two clocks">
+      <div class="clocks">
+        <div class="clock">
+          <p class="clock-place">Ephraim, Utah</p>
+          <p class="clock-time" data-clock="America/Denver">--:--</p>
+          <p class="clock-tz">Mountain Time</p>
+        </div>
+        <div class="clock">
+          <p class="clock-place">Kathmandu</p>
+          <p class="clock-time" data-clock="Asia/Kathmandu">--:--</p>
+          <p class="clock-tz">UTC+5:45. Yes, forty-five.</p>
+        </div>
+      </div>
+
+      <figure class="window-fig">
+        <svg viewBox="0 0 200 220" aria-hidden="true" focusable="false"><use href="#tikijhya"/></svg>
+        <figcaption>This courtyard borrows from the <em>chok</em> of Bhaktapur and Patan: herringbone brick, a carved wooden lattice window (<em lang="ne-Latn">tikijhyā</em>), and a stone water spout (<em lang="ne-Latn">dhunge dhārā</em>) of the kind still running in many neighborhoods.</figcaption>
+      </figure>
+
+      <div class="ledger">
+        <h3 class="small-h">Where I've been</h3>
+        <dl>
+          <div><dt>2025 –</dt><dd>Snow College, Utah · B.S. Computer Software Engineering, Honors</dd></div>
+          <div><dt>2021 – 24</dt><dd>Capital College and Research Center, Kathmandu · +2, Computer Science</dd></div>
+          <div><dt>2023 –</dt><dd>Everest TechSo Network · Founding President, now on the board</dd></div>
+          <div><dt>2023 –</dt><dd>Mold Skill · Co-founder</dd></div>
+          <div><dt>2024 –</dt><dd>Think Big · HR Manager, mentor</dd></div>
+          <div><dt>2024 – 25</dt><dd>Utkristha Sikshya · Data Analyst (remote)</dd></div>
+          <div><dt>2025 – 26</dt><dd>Snow College Computer Science Club · President</dd></div>
+          <div><dt>Now</dt><dd>Resident Assistant · Physics grader · Honors Program assistant</dd></div>
+        </dl>
+      </div>
+    </aside>
+  </div>
+  <p class="back-to-map"><a href="#top">↑ Back to the map</a></p>
+</section>
+
+<!-- ============================ THE NEXT STOP ============================ -->
+<section class="place place-next" id="contact" data-place="nextstop" aria-labelledby="contact-title" tabindex="-1">
+  <header class="place-head">
+    <p class="place-kicker"><span class="pin pin-ink" aria-hidden="true"></span>The Next Stop · Contact</p>
+    <h2 id="contact-title">Want to talk? Email is fastest.</h2>
+    <p class="place-intro">I'm in Ephraim, Utah, on Mountain Time. I read everything that isn't spam.</p>
+  </header>
+
+  <div class="board" role="region" aria-labelledby="board-cap">
+    <p class="board-head" id="board-cap"><span>Departures</span><span class="board-clock" data-clock="America/Denver" aria-hidden="true">--:--</span></p>
+    <table class="board-table">
+      <caption class="sr-only">Ways to reach Peshal</caption>
+      <thead><tr><th scope="col">To</th><th scope="col">Via</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Email</th><td><a href="mailto:peshalparajuli2006@gmail.com">peshalparajuli2006@gmail.com</a></td><td><span class="flap flap-go">Boarding</span></td></tr>
+        <tr><th scope="row">LinkedIn</th><td><a href="https://www.linkedin.com/in/peshalparajuli/">in/peshalparajuli</a></td><td><span class="flap">On time</span></td></tr>
+        <tr><th scope="row">GitHub</th><td><a href="https://github.com/parajulipeshal">@parajulipeshal</a></td><td><span class="flap">On time</span></td></tr>
+        <tr><th scope="row">Résumé</th><td><a href="assets/docs/peshal-parajuli-resume.pdf" download>PDF, 104 KB</a></td><td><span class="flap">Download</span></td></tr>
+      </tbody>
+    </table>
+    <!-- TODO(peshal): résumé PDF copied from newPortfolioWeb; replace it if there's a newer one. -->
+  </div>
+  <p class="back-to-map"><a href="#top">↑ Back to the map</a></p>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Built by hand with HTML, CSS and a little JavaScript. The cartoon me is a flat render, so he can't turn around. He's doing his best.</p>
+  <p>© 2026 Peshal Parajuli · <a href="#top">Back to the map</a></p>
+</footer>
+
+<!-- ============================ FOCUS DIALOG ============================ -->
+<dialog class="visit" data-visit aria-labelledby="visit-title">
+  <div class="visit-bar">
+    <button type="button" class="visit-back" data-close><span aria-hidden="true">←</span> Back to the map</button>
+    <p class="visit-title" id="visit-title" data-visit-title>Visiting</p>
+    <button type="button" class="visit-close" data-close aria-label="Close"><span aria-hidden="true">×</span></button>
+  </div>
+  <div class="visit-body" data-visit-body></div>
+</dialog>
+
+<!-- ============================ SVG LIBRARY ============================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="bricks" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="var(--s-brick)"/>
+      <path d="M0 .5H24M0 6.5H24M6 .5V6.5M18 6.5V12.5" stroke="var(--s-brick-line)" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="bricks-side" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="var(--s-brick-d)"/>
+      <path d="M0 .5H24M0 6.5H24M6 .5V6.5M18 6.5V12.5" stroke="var(--s-brick-line)" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="herring" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="scale(1 .55) rotate(45)">
+      <rect width="16" height="16" fill="var(--s-brick)"/>
+      <path d="M0 8H8V0M8 16V8H16" stroke="var(--s-brick-line)" stroke-width="1.4" fill="none"/>
+    </pattern>
+
+    <!-- simple tree -->
+    <g id="tree">
+      <rect x="-3" y="-6" width="6" height="22" fill="var(--s-wood)"/>
+      <circle cx="0" cy="-26" r="26" fill="var(--s-moss)"/>
+      <circle cx="-10" cy="-34" r="12" fill="var(--s-moss-l)"/>
+      <path d="M-24 -18 A26 26 0 0 0 24 -18 A30 30 0 0 1 -24 -18Z" fill="var(--s-moss-d)"/>
+    </g>
+    <g id="bush">
+      <ellipse cx="0" cy="0" rx="30" ry="16" fill="var(--s-moss)"/>
+      <ellipse cx="-8" cy="-6" rx="12" ry="7" fill="var(--s-moss-l)"/>
+    </g>
+    <g id="lamp">
+      <rect x="-2" y="-56" width="4" height="56" fill="var(--s-ink)"/>
+      <circle cx="0" cy="-62" r="16" class="lamp-glow" fill="var(--s-glow)"/>
+      <rect x="-7" y="-70" width="14" height="14" rx="2" fill="var(--s-window)" stroke="var(--s-ink)" stroke-width="2"/>
+    </g>
+
+    <!-- ===== THE BUILD LAB ===== -->
+    <g id="art-lab">
+      <ellipse cx="118" cy="204" rx="104" ry="12" fill="var(--s-shadow)"/>
+      <!-- side face -->
+      <path d="M170 92 L222 70 L222 172 L170 196 Z" fill="url(#bricks-side)"/>
+      <!-- front face -->
+      <path d="M22 92 H170 V196 H22 Z" fill="url(#bricks)"/>
+      <!-- open roof: inner back wall + floor seen from above -->
+      <path d="M22 92 L74 70 H222 L170 92 Z" fill="var(--s-floor)"/>
+      <path d="M74 70 H222 V58 H74 Z" fill="var(--s-brick-d)"/>
+      <path d="M22 92 L74 70 V58 L22 80 Z" fill="var(--s-brick-d)"/>
+      <!-- monitors peeking from open roof -->
+      <g class="screens">
+        <rect x="70" y="52" width="38" height="26" rx="2" fill="var(--s-ink)"/><rect x="73" y="55" width="32" height="20" fill="var(--s-screen)" class="screen"/>
+        <rect x="114" y="46" width="46" height="32" rx="2" fill="var(--s-ink)"/><rect x="117" y="49" width="40" height="26" fill="var(--s-screen)" class="screen"/>
+        <path d="M120 56 H140 M120 62 H150 M120 68 H134" stroke="var(--s-ink)" stroke-width="2" opacity=".5"/>
+        <rect x="164" y="56" width="30" height="22" rx="2" fill="var(--s-ink)"/><rect x="167" y="59" width="24" height="16" fill="var(--s-screen)" class="screen"/>
+      </g>
+      <!-- unfinished wall: missing bricks + scaffold -->
+      <path d="M170 92 L222 70 V58 L198 68 V60 L184 66 V76 L170 82 Z" fill="var(--s-paper)"/>
+      <g stroke="var(--s-wood)" stroke-width="3" fill="none"><path d="M196 30 V130 M218 22 V122 M196 50 L218 42 M196 80 L218 72"/></g>
+      <rect x="203" y="10" width="6" height="18" fill="var(--s-brick)"/>
+      <!-- crane hook -->
+      <path d="M206 10 V0" stroke="var(--s-ink)" stroke-width="2"/>
+      <!-- windows -->
+      <g class="windows">
+        <rect x="36" y="112" width="30" height="30" fill="var(--s-window)" stroke="var(--s-ink)" stroke-width="3"/>
+        <path d="M51 112 V142 M36 127 H66" stroke="var(--s-ink)" stroke-width="2"/>
+        <rect x="126" y="112" width="30" height="30" fill="var(--s-window)" stroke="var(--s-ink)" stroke-width="3"/>
+        <path d="M141 112 V142 M126 127 H156" stroke="var(--s-ink)" stroke-width="2"/>
+        <path d="M184 116 L208 106 V132 L184 142 Z" fill="var(--s-window)" stroke="var(--s-ink)" stroke-width="3"/>
+      </g>
+      <!-- door -->
+      <path d="M80 196 V150 Q96 136 112 150 V196 Z" fill="var(--s-ink)"/>
+      <circle cx="106" cy="174" r="2" fill="var(--s-paper)"/>
+      <!-- sign -->
+      <rect x="64" y="100" width="64" height="16" fill="var(--s-paper)" stroke="var(--s-ink)" stroke-width="2"/>
+      <text x="96" y="112" text-anchor="middle" class="art-sign">BUILD LAB</text>
+      <!-- outline -->
+      <path d="M22 92 H170 V196 H22 Z M170 92 L222 70 V172 L170 196" fill="none" stroke="var(--s-ink)" stroke-width="3" stroke-linejoin="round"/>
+      <!-- stray crates of experiments -->
+      <rect x="2" y="176" width="22" height="20" fill="var(--s-sand)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <path d="M2 186 H24" stroke="var(--s-ink)" stroke-width="2"/>
+      <rect x="178" y="184" width="18" height="16" fill="var(--s-sand)" stroke="var(--s-ink)" stroke-width="2.5"/>
+    </g>
+
+    <!-- ===== THE SERVER GARDEN ===== -->
+    <g id="art-garden">
+      <ellipse cx="120" cy="204" rx="108" ry="14" fill="var(--s-shadow)"/>
+      <!-- cables snaking out -->
+      <g fill="none" stroke="var(--s-ink)" stroke-width="3" stroke-linecap="round">
+        <path d="M100 196 C80 206 50 196 30 204"/>
+        <path d="M140 196 C170 210 200 196 226 206"/>
+        <path d="M120 196 C122 210 110 214 96 218" stroke="var(--s-brick)"/>
+      </g>
+      <!-- cabinet side -->
+      <path d="M156 34 L186 20 V176 L156 196 Z" fill="var(--s-ink-2)"/>
+      <!-- cabinet top -->
+      <path d="M84 34 L114 20 H186 L156 34 Z" fill="var(--s-ink-3)"/>
+      <!-- cabinet front -->
+      <rect x="84" y="34" width="72" height="162" fill="var(--s-ink)"/>
+      <g class="rack-units">
+        <rect x="92" y="44" width="56" height="16" fill="var(--s-ink-2)"/>
+        <rect x="92" y="66" width="56" height="16" fill="var(--s-ink-2)"/>
+        <rect x="92" y="88" width="56" height="16" fill="var(--s-ink-2)"/>
+        <rect x="92" y="110" width="56" height="16" fill="var(--s-ink-2)"/>
+        <rect x="92" y="132" width="56" height="16" fill="var(--s-ink-2)"/>
+        <path d="M98 52 H124 M98 74 H120 M98 96 H126 M98 118 H118 M98 140 H124" stroke="var(--s-ink-3)" stroke-width="2"/>
+        <circle cx="138" cy="52" r="3.2" class="led-a"/>
+        <circle cx="138" cy="74" r="3.2" class="led-b"/>
+        <circle cx="138" cy="96" r="3.2" class="led-c"/>
+        <circle cx="138" cy="118" r="3.2" class="led-b"/>
+        <circle cx="138" cy="140" r="3.2" class="led-a"/>
+        <path d="M92 160 H148 M92 168 H148 M92 176 H148 M92 184 H148" stroke="var(--s-ink-3)" stroke-width="2"/>
+      </g>
+      <!-- plants: pots + leaves -->
+      <g>
+        <path d="M18 168 h34 l-4 30 h-26z" fill="var(--s-brick)" stroke="var(--s-ink)" stroke-width="2.5"/>
+        <path d="M35 168 C20 140 6 136 4 120 C24 124 34 140 35 168 C36 130 46 112 62 108 C60 132 46 150 35 168Z" fill="var(--s-moss)" stroke="var(--s-ink)" stroke-width="2"/>
+        <path d="M190 172 h30 l-4 26 h-22z" fill="var(--s-sand)" stroke="var(--s-ink)" stroke-width="2.5"/>
+        <path d="M205 172 C196 150 196 130 205 110 C214 130 214 150 205 172Z M205 172 C190 160 180 160 172 150 C190 146 200 156 205 172Z" fill="var(--s-moss-l)" stroke="var(--s-ink)" stroke-width="2"/>
+        <ellipse cx="60" cy="200" rx="22" ry="10" fill="var(--s-moss-d)"/>
+        <ellipse cx="180" cy="206" rx="18" ry="8" fill="var(--s-moss)"/>
+        <!-- vine climbing the cabinet -->
+        <path d="M84 190 C76 160 92 140 84 110 C78 90 90 70 86 50" fill="none" stroke="var(--s-moss)" stroke-width="3"/>
+        <ellipse cx="80" cy="150" rx="7" ry="4" fill="var(--s-moss)" transform="rotate(-30 80 150)"/>
+        <ellipse cx="90" cy="120" rx="7" ry="4" fill="var(--s-moss-l)" transform="rotate(20 90 120)"/>
+        <ellipse cx="82" cy="84" rx="7" ry="4" fill="var(--s-moss)" transform="rotate(-20 82 84)"/>
+      </g>
+      <path d="M84 34 H156 V196 H84 Z M156 34 L186 20 V176 L156 196" fill="none" stroke="var(--s-ink)" stroke-width="3" stroke-linejoin="round"/>
+      <!-- tiny penguin-free zone sign: a little wooden sign -->
+      <rect x="196" y="120" width="4" height="40" fill="var(--s-wood)"/>
+      <rect x="180" y="110" width="40" height="18" fill="var(--s-paper)" stroke="var(--s-ink)" stroke-width="2"/>
+      <text x="200" y="123" text-anchor="middle" class="art-sign">~/garden</text>
+    </g>
+
+    <!-- ===== THE NEPAL COURTYARD ===== -->
+    <g id="art-courtyard">
+      <ellipse cx="120" cy="206" rx="112" ry="12" fill="var(--s-shadow)"/>
+      <!-- herringbone courtyard floor -->
+      <path d="M8 168 L70 132 H232 L170 168 Z" fill="url(#herring)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <path d="M8 168 H170 V184 H8 Z" fill="var(--s-brick-d)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <path d="M170 168 L232 132 V148 L170 184 Z" fill="var(--s-brick-dd)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <!-- back wall with carved window -->
+      <path d="M70 132 V60 H190 V132 Z" fill="url(#bricks)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <rect x="96" y="74" width="40" height="40" fill="var(--s-wood)" stroke="var(--s-ink)" stroke-width="2.5"/>
+      <g stroke="var(--s-wood-d)" stroke-width="2" fill="var(--s-window)" class="windows">
+        <rect x="101" y="79" width="30" height="30"/>
+      </g>
+      <path d="M101 79 L131 109 M131 79 L101 109 M116 79 L131 94 L116 109 L101 94 Z" stroke="var(--s-wood-d)" stroke-width="2" fill="none"/>
+      <path d="M92 74 H140 M92 114 H140" stroke="var(--s-ink)" stroke-width="3"/>
+      <!-- small two-tier shrine (pagoda) -->
+      <g>
+        <rect x="160" y="90" width="44" height="52" fill="var(--s-brick)" stroke="var(--s-ink)" stroke-width="2.5"/>
+        <path d="M172 142 V112 Q182 102 192 112 V142 Z" fill="var(--s-ink)"/>
+        <path d="M146 92 L182 70 L218 92 Z" fill="var(--s-roof)" stroke="var(--s-ink)" stroke-width="2.5" stroke-linejoin="round"/>
+        <rect x="166" y="62" width="32" height="10" fill="var(--s-wood)" stroke="var(--s-ink)" stroke-width="2"/>
+        <path d="M154 64 L182 44 L210 64 Z" fill="var(--s-roof)" stroke="var(--s-ink)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- gajur finial -->
+        <path d="M182 44 V30" stroke="var(--s-ink)" stroke-width="2"/>
+        <circle cx="182" cy="28" r="4" fill="var(--s-gold)" stroke="var(--s-ink)" stroke-width="1.5"/>
+        <path d="M179 24 L182 14 L185 24 Z" fill="var(--s-gold)" stroke="var(--s-ink)" stroke-width="1.5"/>
+        <!-- struts -->
+        <path d="M160 92 L152 100 M204 92 L212 100" stroke="var(--s-wood-d)" stroke-width="3"/>
+      </g>
+      <!-- stone water spout -->
+      <g>
+        <path d="M18 164 V118 H62 V164 Z" fill="var(--s-stone)" stroke="var(--s-ink)" stroke-width="2.5"/>
+        <path d="M28 132 C34 124 46 124 50 132 L44 136 C42 132 36 132 34 136 Z" fill="var(--s-stone-d)" stroke="var(--s-ink)" stroke-width="2"/>
+        <path d="M46 136 C50 146 50 152 48 160" stroke="var(--s-water)" stroke-width="3" fill="none" class="water"/>
+        <ellipse cx="44" cy="164" rx="16" ry="5" fill="var(--s-water)" stroke="var(--s-ink)" stroke-width="2"/>
+      </g>
+      <!-- a pigeon, because there is always a pigeon -->
+      <g transform="translate(108 152)">
+        <ellipse cx="0" cy="0" rx="8" ry="5" fill="var(--s-stone)" stroke="var(--s-ink)" stroke-width="1.5"/>
+        <circle cx="7" cy="-4" r="3.4" fill="var(--s-stone-d)" stroke="var(--s-ink)" stroke-width="1.5"/>
+        <path d="M10 -4 L13 -3" stroke="var(--s-brick)" stroke-width="1.5"/>
+      </g>
+    </g>
+
+    <!-- ===== THE NEXT STOP ===== -->
+    <g id="art-nextstop">
+      <ellipse cx="120" cy="204" rx="104" ry="12" fill="var(--s-shadow)"/>
+      <!-- posts -->
+      <rect x="40" y="70" width="8" height="132" fill="var(--s-ink)"/>
+      <rect x="192" y="70" width="8" height="132" fill="var(--s-ink)"/>
+      <!-- board -->
+      <rect x="22" y="30" width="196" height="112" rx="4" fill="var(--s-ink)"/>
+      <rect x="30" y="38" width="180" height="20" fill="var(--s-ink-2)"/>
+      <text x="38" y="53" class="art-board art-board-h">NEXT STOP</text>
+      <g class="board-rows">
+        <rect x="30" y="64" width="180" height="20" fill="var(--s-ink-2)"/>
+        <rect x="30" y="88" width="180" height="20" fill="var(--s-ink-2)"/>
+        <rect x="30" y="112" width="180" height="20" fill="var(--s-ink-2)"/>
+        <text x="38" y="79" class="art-board">EMAIL</text><text x="202" y="79" text-anchor="end" class="art-board art-go">BOARDING</text>
+        <text x="38" y="103" class="art-board">LINKEDIN</text><text x="202" y="103" text-anchor="end" class="art-board">ON TIME</text>
+        <text x="38" y="127" class="art-board">GITHUB</text><text x="202" y="127" text-anchor="end" class="art-board">ON TIME</text>
+      </g>
+      <!-- bench -->
+      <rect x="70" y="170" width="100" height="8" fill="var(--s-wood)" stroke="var(--s-ink)" stroke-width="2"/>
+      <path d="M78 178 V198 M162 178 V198" stroke="var(--s-ink)" stroke-width="3"/>
+      <rect x="70" y="156" width="100" height="7" fill="var(--s-wood)" stroke="var(--s-ink)" stroke-width="2"/>
+      <!-- signpost arrows -->
+      <rect x="214" y="150" width="5" height="54" fill="var(--s-wood-d)"/>
+      <path d="M200 152 H236 L242 158 L236 164 H200 Z" fill="var(--s-brick)" stroke="var(--s-ink)" stroke-width="2"/>
+      <path d="M232 168 H198 L192 174 L198 180 H232 Z" fill="var(--s-paper)" stroke="var(--s-ink)" stroke-width="2"/>
+      <!-- small suitcase -->
+      <rect x="104" y="146" width="24" height="18" rx="2" fill="var(--s-brick)" stroke="var(--s-ink)" stroke-width="2"/>
+      <path d="M110 146 V140 H122 V146" fill="none" stroke="var(--s-ink)" stroke-width="2"/>
+    </g>
+
+    <!-- Carved lattice window (used in About) -->
+    <g id="tikijhya">
+      <rect x="10" y="10" width="180" height="200" fill="url(#bricks)" stroke="var(--s-ink)" stroke-width="3"/>
+      <rect x="30" y="34" width="140" height="150" fill="var(--s-wood)" stroke="var(--s-ink)" stroke-width="3"/>
+      <path d="M22 34 H178 M22 184 H178" stroke="var(--s-ink)" stroke-width="6"/>
+      <rect x="44" y="48" width="112" height="122" fill="var(--s-window)" stroke="var(--s-wood-d)" stroke-width="3"/>
+      <g stroke="var(--s-wood-d)" stroke-width="3" fill="none">
+        <path d="M44 48 L156 170 M156 48 L44 170"/>
+        <path d="M44 78 L74 48 M44 109 L104 48 M44 140 L134 48 M44 170 L156 58 M74 170 L156 88 M104 170 L156 118 M134 170 L156 148"/>
+        <path d="M156 78 L126 48 M156 109 L96 48 M156 140 L66 48 M156 170 L44 58 M126 170 L44 88 M96 170 L44 118 M66 170 L44 148"/>
+      </g>
+      <path d="M30 34 L18 22 M170 34 L182 22 M30 184 L18 196 M170 184 L182 196" stroke="var(--s-ink)" stroke-width="3"/>
+    </g>
+  </defs>
+</svg>
+</body>
+</html>
